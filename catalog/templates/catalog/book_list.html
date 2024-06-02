@@ -1,0 +1,13 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}Book List{% endblock %}
+
+{% block content %}
+<h2>Book List</h2>
+<ul>
+    {% for book in books %}
+    <li>{{ book.title }} by {{ book.author }} ({{ book.published_date }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
